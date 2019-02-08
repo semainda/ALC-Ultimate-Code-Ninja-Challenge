@@ -1,0 +1,3 @@
+# Node modules staff
+node_modules/
+*-lock.json
