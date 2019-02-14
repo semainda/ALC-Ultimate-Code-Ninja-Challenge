@@ -47,6 +47,5 @@
     if (shoppingList.length === 0)
         console.log(chalk.yellow(`\nOOPS! your shopping list is empty\n`));
     else
-     console.log(chalk.green(`\nYour today's shopping list includes: ` + shoppingList.join() + `\n`));
+     console.log(chalk.green(`\nYour today's shopping list includes: ${shoppingList.join()}\n`));
  });
- 
