@@ -34,11 +34,11 @@ const recursiveReadLine = () => {
                 return readline.close();
             }
             else if (Number(guessedNumber) > randomGeneratedNumber){
-                console.log(`You guessed high`);
+                console.log(chalk.red(`You guessed high`));
                 return recursiveReadLine();
             }
             else{
-                console.log(`You guessed low`);
+                console.log(chalk.red(`You guessed low`));
                 return recursiveReadLine();
             }
         }
@@ -47,7 +47,7 @@ const recursiveReadLine = () => {
     });
 }
 
-console.log('Hello there!\nWelcome to our guessing game and following are detailed informations: ');
+console.log('\nHello there!\nWelcome to our guessing game and following are detailed informations: ');
 console.log('- Your given eight(8) tries to guess any number between 1 and 10.');
 console.log('- Program will then tell whether you have guessed high, low or perfect.');
 console.log('- Program will exit on the fact that you have exhausted all eight(8) tries or guessed perfect.');
