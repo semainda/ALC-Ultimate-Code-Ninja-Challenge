@@ -12,7 +12,7 @@
  */
 const input = require('node-console-input');
 // operators
-const operatorsObject = {
+const operators = {
     1: ' Addition(+)',
     2: ' Subtraction(-)',
     3: ' Multiplication(*)',
@@ -40,18 +40,17 @@ let calculator = (operator, firstNumber, secondNumber) => {
 
 console.log('\nHello there!\nHere is our simple calculator, just follow the instruction to get started.');
 console.log('\nPlease choose any arithmetic operator by adding its number to the prompt below');
-console.log(`1:${operatorsObject[1]}\n2:${operatorsObject[2]}\n3:${operatorsObject[3]}
-4:${operatorsObject[4]}\n5:${operatorsObject[5]}\n6:${operatorsObject[6]}`);
+console.log(`1:${operators[1]}\n2:${operators[2]}\n3:${operators[3]}\n4:${operators[4]}\n5:${operators[5]}\n6:${operators[6]}`);
 
 // get operator number
-let arithmeticOperator = input.getConsoleInput(`\nWhat's your arithmetic operator?: `);
-let operatorNumber = parseInt(arithmeticOperator);
+let arithmeticOperator = parseInt(input.getConsoleInput(`\nWhat's your arithmetic operator?: `));
 // validate received operator number
-if (operatorsObject[operatorNumber] !== undefined){
+if (isNaN(arithmeticOperator) || operators[arithmeticOperator] === undefined){
+    console.log(`OOPS! supplied input does not represent any valid arithmetic operator number.`);
+}
+else{
     let firstNumber = parseInt(input.getConsoleInput(`What's your first number?: `));
     let secondNumber = parseInt(input.getConsoleInput(`What's your second number?: `));
-    let result = calculator(operatorNumber, firstNumber, secondNumber);
+    let result = calculator(arithmeticOperator, firstNumber, secondNumber);
     console.log(result);
 }
-else
-    console.log(`OOPS! '${arithmeticOperator}' does not represent a valid arithmetic operator.Please supply a valid operator number.`);
