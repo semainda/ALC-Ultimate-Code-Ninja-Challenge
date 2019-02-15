@@ -21,6 +21,7 @@
   "homepage": "https://github.com/semainda/ALC-Ultimate-Code-Ninja-Challenge#readme",
   "devDependencies": {
     "chalk": "^2.4.2",
-    "node-console-input": "^1.1.1"
+    "node-console-input": "^1.1.1",
+    "number-to-words": "^1.2.4"
   }
 }
