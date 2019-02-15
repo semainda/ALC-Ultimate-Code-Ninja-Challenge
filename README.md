@@ -58,4 +58,4 @@ Andela Learning Community in Tanzania Ultimate Code Ninja Challenge.
 
 ## Credits
 
-Selemani Nuru Semainda #ALCInTanzania
+Selemani Nuru Semainda [```#ALCInTanzania```](https://twitter.com/hashtag/ALCinTanzania?src=hash&lang=en)
