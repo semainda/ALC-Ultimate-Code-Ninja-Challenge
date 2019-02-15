@@ -12,7 +12,7 @@ Andela Learning Community in Tanzania Ultimate Code Ninja Challenge.
 
 #### Step 1: Install NodeJs and npm
 
-```https://nodejs.org/en/download/package-manager/```
+[```here```](https://nodejs.org/en/download/package-manager/`)```https://nodejs.org/en/download/package-manager/```
 
 #### Step 2: Clone the ALC-Ultimate-Code-Ninja-Challenge repository
 
@@ -54,8 +54,8 @@ Andela Learning Community in Tanzania Ultimate Code Ninja Challenge.
 
 ## Challenges Questions
 
-[```here```](https://docs.google.com/document/d/1Qm4TzqRLnT_VmnBkiLyuC9w1f04NYI6w5ST9VQfK7LM/edit)
+[```here```](https://docs.google.com/document/d/1Qm4TzqRLnT_VmnBkiLyuC9w1f04NYI6w5ST9VQfK7LM/edit)```https://docs.google.com/document/d/1Qm4TzqRLnT_VmnBkiLyuC9w1f04NYI6w5ST9VQfK7LM/edit```
 
 ## Credits
 
-Selemani Nuru Semainda
+Selemani Nuru Semainda #ALCInTanzania
