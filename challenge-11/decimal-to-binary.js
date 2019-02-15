@@ -29,4 +29,3 @@ if (binaryList.length)
     console.log(`The decima-binary equivalent = ${binaryList.reverse().join('')}`);
 else
     console.log('OOPS! supplied input is not a valid Decimal(base-ten) number.');
-
