@@ -17,35 +17,24 @@
  //Array to hold shoppinglist items
  let shoppingList = [];
 
- //Create interface to read data
- const readline = require('readline').createInterface({
-     input: process.stdin,
-     output: process.stdout 
- });
+ //console input module
+ const input = require('node-console-input');
 
  // Create chalk object for coloring text
  const chalk = require('chalk');
 
- readline.question(`\nWhat\'s your name: `, (name) => {
-     readline.setPrompt(`\nHello ${name.toUpperCase().trim()}...,\nWhat would you like to add first in your shopping list today? (Q to exit): `);
-     readline.prompt();
-     readline.on('line', (item) => {
-        // check if 'Q' supplied
-        if (item.toLowerCase().trim() === `q`)
-            readline.close();
-        else {
-            // add item to shopping list array
-            shoppingList.push(item.toLowerCase().trim());
-            readline.setPrompt(`\nWhat else would you like to add?: `);
-            readline.prompt();
-        }
-     });
- });
+let name = input.getConsoleInput(`\nWhat\'s your name? `)
+console.log(`\nHello ${name.toUpperCase().trim()}...,`);
+let item = input.getConsoleInput(`What would you like to add first in your shopping list today? (Q to exit): `);
 
- readline.on('close', () => {
-    // check if shopping contains items
-    if (shoppingList.length === 0)
-        console.log(chalk.yellow(`\nOOPS! your shopping list is empty\n`));
-    else
-     console.log(chalk.green(`\nYour today's shopping list includes: ${shoppingList.join()}\n`));
- });
+while(item.toLowerCase().trim() !== `q`){
+    // add item to shopping list array
+    shoppingList.push(item.toLowerCase().trim());
+    item = input.getConsoleInput(`\nWhat else would you like to add?: `);
+}
+
+// check if shopping contains items
+if (shoppingList.length)
+    console.log(chalk.green(`\nYour today's shopping list includes: ${shoppingList.join()}\n`));
+else
+    console.log(chalk.yellow(`\nOOPS! your shopping list is empty\n`));
